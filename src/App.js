@@ -3,7 +3,7 @@ import Board from "./Board";
 import { updateURLParameter } from "./helpers"
 
 function App() {
-  const [imgUrl, setImgUrl] = useState("")
+  const [imgUrl, setImgUrl] = useState("https://github.com/KingofGnome/frizquiz/raw/main/Cover%20Programmheft_quad.jpg")
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
