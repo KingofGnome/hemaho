@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/KingofGnome/hemaho/static/css/main.7853dcc7.css",
+    "main.js": "/KingofGnome/hemaho/static/js/main.e56a4627.js",
+    "index.html": "/KingofGnome/hemaho/index.html",
+    "main.7853dcc7.css.map": "/KingofGnome/hemaho/static/css/main.7853dcc7.css.map",
+    "main.e56a4627.js.map": "/KingofGnome/hemaho/static/js/main.e56a4627.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7853dcc7.css",
+    "static/js/main.e56a4627.js"
+  ]
+}
