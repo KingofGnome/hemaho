@@ -3,7 +3,7 @@ import Board from "./Board";
 import { updateURLParameter } from "./helpers"
 
 function App() {
-  const [imgUrl, setImgUrl] = useState("https://github.com/KingofGnome/frizquiz/raw/main/Cover%20Programmheft_quad.jpg")
+  const [imgUrl, setImgUrl] = useState("https://github.com/KingofGnome/hemaho/raw/main/recep.jpg")
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>React sliding puzzle</h1>
+      <h1>Helena und Mariano</h1>
       <Board imgUrl={imgUrl} />
       <input value={imgUrl} onChange={handleImageChange} />
     </div>
