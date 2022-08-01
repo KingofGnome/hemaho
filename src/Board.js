@@ -37,10 +37,10 @@ function Board({ imgUrl }) {
     setIsStarted(true)
   }
 
-  //if (!isStarted) {
-  //  shuffleTiles()
-  //  setIsStarted(true)
-  //}
+  if (!isStarted) {
+    shuffleTiles()
+    setIsStarted(true)
+  }
 
   const pieceWidth = Math.round(BOARD_SIZE / GRID_SIZE);
   const pieceHeight = Math.round(BOARD_SIZE / GRID_SIZE);
@@ -49,6 +49,8 @@ function Board({ imgUrl }) {
     height: BOARD_SIZE,
   };
   const hasWon = isSolved(tiles)
+
+  const notWon = !hasWon
 
   return (
     <>
@@ -65,7 +67,17 @@ function Board({ imgUrl }) {
           />
         ))}
       </ul>
-      {hasWon && <div>Hurray!!!! 🧠 🎉 Ihr habts geschafft. LG Felix</div>}
+      {hasWon && <div>Hurray!!!! 🧠 🎉 Ihr habts geschafft. <br />
+        Hier gibts das Rezept als <a href="https://github.com/KingofGnome/hemaho/raw/main/recep.pdf">Download</a>.
+        Jetzt schnell die Töpfe auf den Herd. <br />
+        Sendet ein Bild mit dem Fertigen Gericht an <a href="tel:+4915753055116"> +4915753055116</a> <br />
+        für den letzten Hinweis. <br />
+        LG Felix</div>}
+        {!hasWon && <div> Ans Werk ihr Rätselfüchse<br />
+        <br />
+        <br />
+        <br />
+        </div>}
     </>
   );
 }
