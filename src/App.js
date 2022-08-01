@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Board from "./Board";
 import { updateURLParameter } from "./helpers"
+import handleStartClick from "./Board"
 
 function App() {
   const [imgUrl, setImgUrl] = useState("https://github.com/KingofGnome/hemaho/raw/main/recep.jpg")
@@ -21,9 +22,9 @@ function App() {
     <div className="App">
       <h1>Helena und Mariano</h1>
       <Board imgUrl={imgUrl} />
-      <input value={imgUrl} onChange={handleImageChange} />
     </div>
   );
 }
+
 
 export default App;

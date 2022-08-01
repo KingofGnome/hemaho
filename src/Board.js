@@ -6,7 +6,11 @@ import { canSwap, shuffle, swap, isSolved } from "./helpers"
 function Board({ imgUrl }) {
   const [tiles, setTiles] = useState([...Array(TILE_COUNT).keys()]);
   const [isStarted, setIsStarted] = useState(false);
+
+
   console.log('is started:', isStarted)
+
+
 
   const shuffleTiles = () => {
     const shuffledTiles = shuffle(tiles)
@@ -33,6 +37,11 @@ function Board({ imgUrl }) {
     setIsStarted(true)
   }
 
+  //if (!isStarted) {
+  //  shuffleTiles()
+  //  setIsStarted(true)
+  //}
+
   const pieceWidth = Math.round(BOARD_SIZE / GRID_SIZE);
   const pieceHeight = Math.round(BOARD_SIZE / GRID_SIZE);
   const style = {
@@ -56,10 +65,7 @@ function Board({ imgUrl }) {
           />
         ))}
       </ul>
-      {hasWon && isStarted && <div>Hurray!!!! 🧠 🎉 Ihr habts geschafft. LG Felix</div>}
-      {!isStarted ?
-        (<button onClick={() => handleStartClick()}>Shuffle</button>) :
-        (<button onClick={() => handleShuffleClick()}>Restart game</button>)}
+      {hasWon && <div>Hurray!!!! 🧠 🎉 Ihr habts geschafft. LG Felix</div>}
     </>
   );
 }
