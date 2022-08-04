@@ -67,17 +67,13 @@ function Board({ imgUrl }) {
           />
         ))}
       </ul>
-      {hasWon && <div>Hurray!!!! 🧠 🎉 Ihr habts geschafft. <br />
-        Hier gibts das Rezept als <a href="https://github.com/KingofGnome/hemaho/raw/main/recep.pdf">Download</a>.
-        Jetzt schnell die Töpfe auf den Herd. <br />
-        Sendet ein Bild mit dem Fertigen Gericht an <a href="tel:+4915753055116"> +4915753055116</a> <br />
-        für den letzten Hinweis. <br />
-        LG Felix</div>}
-        {!hasWon && <div> Ans Werk ihr Rätselfüchse<br />
-        <br />
-        <br />
-        <br />
-        </div>}
+      {hasWon && <div>
+        Glückwunsch, <a href="https://github.com/KingofGnome/hemaho/raw/main/recep.jpg">hier das Rezept</a> nun kocht'et <br/>
+        fotografiert eure Speise und sagt ob ihrs mochtet.<br/>
+        <br/>
+        Unter <a href="tel:+49****"> +49****</a> <br />
+        Ihr bekommt eure Zahl wie gezaubert hex hex <br />
+      </div>}
     </>
   );
 }

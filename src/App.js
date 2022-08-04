@@ -4,7 +4,7 @@ import { updateURLParameter } from "./helpers"
 import handleStartClick from "./Board"
 
 function App() {
-  const [imgUrl, setImgUrl] = useState("https://github.com/KingofGnome/hemaho/raw/main/recep.jpg")
+  const [imgUrl, setImgUrl] = useState("https://github.com/KingofGnome/hemaho/raw/main/aubergineneintopf-mit-zitronencouscous4x4.jpg")
 
   useEffect(() => {
     const urlParams = new URLSearchParams(window.location.search)
@@ -20,7 +20,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Helena und Mariano</h1>
+      <h1>Helena und Mariano's Rätselspaß</h1>
+      <div class="center">So einfach machen wirs euch nicht <br/>
+        erst müsst ihr dies Puzzle beenden. <br/>
+        Dann kocht euch jenes leckere Gericht <br/>
+        ein Foto davon müsst ihr uns senden. <br/>
+        <br/>
+        Wohin erfahrt ihr nach dem Rätselspiel. <br/>
+        Eine Belohnung wartet wenn uns das Foto gefiel. <br/>
+      </div>
       <Board imgUrl={imgUrl} />
     </div>
   );
